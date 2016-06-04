@@ -6,6 +6,7 @@ import { APP_SHELL_DIRECTIVES } from '@angular/app-shell';
 import {MdButton} from '@angular2-material/button';
 import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
 import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 @Component({
   moduleId: module.id,
@@ -13,9 +14,17 @@ import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';
   templateUrl: 'car-maintenance-web.component.html',
   styleUrls: ['car-maintenance-web.component.css'],
   directives: [MdToolbar, MdButton, MdIcon, MD_LIST_DIRECTIVES,
-    MD_SIDENAV_DIRECTIVES, CarListComponent],
-  providers: [MdIconRegistry]
+    MD_SIDENAV_DIRECTIVES, ROUTER_DIRECTIVES, CarListComponent ],
+  providers: [ROUTER_PROVIDERS, MdIconRegistry]
 })
+@RouteConfig([
+  {
+    path: '/cars',
+    name: 'Cars',
+    component: CarListComponent,
+    useAsDefault: true
+  }
+])
 export class CarMaintenanceWebAppComponent {
   title = 'car-maintenance-web works!';
 }
