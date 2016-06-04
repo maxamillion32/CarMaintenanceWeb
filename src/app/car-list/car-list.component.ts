@@ -14,6 +14,7 @@ import {CarFormComponent} from '../car-form';
 })
 
 export class CarListComponent implements OnInit {
+  addFormShowing: boolean = false;
   cars: FirebaseListObservable<any>;
   constructor(private af: AngularFire) {
 

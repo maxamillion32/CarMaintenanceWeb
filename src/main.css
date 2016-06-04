@@ -1,3 +1,9 @@
+.form {
+  display: flex;
+}
+.form md-card {
+  flex-grow: 1;
+}
 .card-container {
   display: flex;
   flex-flow: row wrap;
@@ -6,4 +12,7 @@ md-card {
   width: 400px;
   box-sizing: border-box;
   margin: 16px;
+}
+.demo-full-width {
+  width: 100%;
 }

@@ -1,8 +1,7 @@
-
 <button md-fab>
-  <md-icon>add</md-icon>
+  <md-icon (click)="addFormShowing=!addFormShowing">add</md-icon>
 </button>
-<car-form></car-form>
+<car-form *ngIf="addFormShowing"></car-form>
 <div class="card-container">
   <md-card *ngFor="let car of cars | async">
     <md-card-title>{{car.model}}</md-card-title>
