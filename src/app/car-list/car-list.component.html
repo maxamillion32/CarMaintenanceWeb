@@ -1,6 +1,9 @@
-<p>
-  car-list works!
-</p>
-<ul *ngFor="let car of cars|async">
-  <li>{{car.brand}}</li>
-</ul>
+
+<div class="card-container">
+  <md-card *ngFor="let car of cars | async">
+    <md-card-title>{{car.model}}</md-card-title>
+    <md-card-content>
+      {{car.brand}} {{car.year}} {{car.millage}} kms
+    </md-card-content>
+  </md-card>
+  <div>
