@@ -3,14 +3,15 @@
     <md-card-title>Add a car</md-card-title>
     <md-card-content>
       <form>
-        <md-input class="demo-full-width" placeholder="Brand"></md-input>
-        <md-input class="demo-full-width" placeholder="Model"></md-input>
-        <md-input class="demo-full-width" placeholder="Year"></md-input>
-        <md-input class="demo-full-width" placeholder="Millage"></md-input>
+        <md-input class="demo-full-width" placeholder="Brand" [(ngModel)]="car.brand"></md-input>
+        <md-input class="demo-full-width" placeholder="Model" [(ngModel)]="car.model"></md-input>
+        <md-input class="demo-full-width" placeholder="Year" [(ngModel)]="car.year"></md-input>
+        <md-input class="demo-full-width" placeholder="Millage" [(ngModel)]="car.millage"></md-input>
+        <input type="file" />
       </form>
     </md-card-content>
     <md-card-actions align="end">
-      <button md-raised-button color="accent">POST</button>
+      <button md-raised-button color="accent" (click)="save()">POST</button>
     </md-card-actions>
   </md-card>
 </div>

@@ -4,6 +4,7 @@
 <car-form *ngIf="addFormShowing"></car-form>
 <div class="card-container">
   <md-card *ngFor="let car of cars | async">
+    <img md-card-image [alt]="car.model" [src]="car.image">
     <md-card-title>{{car.model}}</md-card-title>
     <md-card-content>
       {{car.brand}} {{car.year}} {{car.millage}} kms
